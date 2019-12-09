@@ -1,10 +1,10 @@
-.about, .point, .gallery, .price, .cta, .hogehoge {
+.about, .point, .gallery, .price, .cta, .hogehoge, .osirase {
   padding: 100px 20%; }
   @media (max-width: 1280px) {
-    .about, .point, .gallery, .price, .cta, .hogehoge {
+    .about, .point, .gallery, .price, .cta, .hogehoge, .osirase {
       padding: 80px 10%; } }
   @media (max-width: 768px) {
-    .about, .point, .gallery, .price, .cta, .hogehoge {
+    .about, .point, .gallery, .price, .cta, .hogehoge, .osirase {
       padding: 80px 5%; } }
 
 html,
@@ -235,19 +235,19 @@ section {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap; }
-@media (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .hogehoge__item {
     width: calc(25% - 20px); }
     .hogehoge__item:not(:nth-child(-n+4)) {
       margin-top: 20px; }
     .hogehoge__item:not(:nth-child(4n)) {
       margin-right: 20px; } }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hogehoge__item {
-    width: calc(50% - 20px); }
+    width: calc(50% - 10px); }
     .hogehoge__item:not(:nth-child(-n+2)) {
       margin-top: 20px; }
-    .hogehoge__item:not(:nth-child(2n)) {
+    .hogehoge__item:nth-child(odd) {
       margin-right: 20px; } }
 .hogehoge__item img {
   width: 100%;
@@ -272,5 +272,36 @@ footer {
   width: 100%;
   max-width: 100%;
   height: auto; }
+
+.bxslid .bx-wrapper {
+  margin: 0 !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: none !important; }
+.bxslid img {
+  width: 100% !important;
+  height: auto !important; }
+
+.osirase img {
+  width: 100%; }
+.osirase h3 {
+  margin-left: 20px; }
+.osirase .cando {
+  _margin: 40px 0 0; }
+  .osirase .cando ol {
+    _padding: 10px;
+    list-style-type: none; }
+  .osirase .cando li {
+    background: #f7f7f7;
+    font-size: 18px; }
+.osirase__text {
+  width: 50%; }
+  @media (max-width: 768px) {
+    .osirase__text {
+      width: 100%; } }
+  .osirase__text p {
+    line-height: 2; }
 
 /*# sourceMappingURL=style.css.map */

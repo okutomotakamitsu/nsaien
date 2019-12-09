@@ -353,7 +353,6 @@ section {
 
 .hogehoge {
   @extend %section-padding;
-
   &__list {
     list-style-type: none;
     display: flex;
@@ -362,10 +361,10 @@ section {
 
   &__item {
 
-  @media (max-width: 1280px) {
+  @media screen and (min-width: 768px) {
     width: calc(25% - 20px);
 
-    &:not(:nth-child(-n+4)) {
+   &:not(:nth-child(-n+4)) {
       margin-top: 20px;
     }
 
@@ -374,14 +373,14 @@ section {
     }
  }
 
-  @media (max-width: 768px) {
-    width: calc(50% - 20px);
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 10px);
 
     &:not(:nth-child(-n+2)) {
       margin-top: 20px;
     }
 
-    &:not(:nth-child(2n)) {
+    &:nth-child(odd) {
       margin-right: 20px;
     }
  }
@@ -422,4 +421,55 @@ footer {
 width:100%;
 max-width: 100%;
 height: auto;
+}
+
+.bxslid {
+.bx-wrapper {
+margin: 0 !important;
+-moz-box-shadow: none !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+border: none !important;
+background: none !important;
+}
+
+ img{
+width: 100% !important;
+height: auto !important;
+}
+}
+
+.osirase {
+  @extend %section-padding;
+  img{width: 100%;}
+  
+  h3{
+     margin-left: 20px;
+  }
+.cando {
+      _margin: 40px 0 0;
+
+      ol {
+        _padding: 10px;
+        list-style-type: none;
+      }
+
+      li {
+        background: $bg-gray;
+        font-size: 18px;
+      }
+    }
+
+&__text {
+    width: 50%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    p {
+      line-height: 2;
+    }
+  }
+
 }
