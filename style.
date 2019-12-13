@@ -290,32 +290,28 @@ footer {
   width: 100% !important;
   height: auto !important; }
 
-.osirase__container {
-  display: flex;
-  flex-wrap: wrap; }
-.osirase__image {
-  width: 50%; }
-  @media (max-width: 768px) {
-    .osirase__image {
-      width: 100%; } }
-  .osirase__image img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #1e366a; }
+.osirase img {
+  width: 100%;
+  border: 1px solid #1e366a; }
+.osirase h3 {
+  margin-left: 20px; }
+.osirase .cando ol {
+  list-style-type: none;
+  border-top: solid #1e366a 1px;
+  /*上のボーダー*/
+  border-bottom: solid #1e366a 1px;
+  /*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em; }
+.osirase .cando li {
+  background: #f7f7f7;
+  font-size: 18px; }
 .osirase__text {
-  padding-left: 30px; }
-  .osirase__text ol {
-    list-style-type: none;
-    border-top: solid #1e366a 1px;
-    /*上のボーダー*/
-    border-bottom: solid #1e366a 1px;
-    /*下のボーダー*/
-    margin: 1em 0; }
-  .osirase__text li {
-    background: #cccccc;
-    font-size: 16px;
-    line-height: 2;
-    padding: 1em 0;
-    margin: 2px; }
+  width: 75%;
+  _width: 50%; }
+  @media (max-width: 768px) {
+    .osirase__text {
+      width: 100%; } }
+  .osirase__text p {
+    line-height: 2; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style..map */

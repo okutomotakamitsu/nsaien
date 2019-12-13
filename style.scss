@@ -13,9 +13,10 @@ $bg-footer: #444;
   }
 }
 
-html,
-body {
+html,body {
   font-family: 'Noto Sans JP', sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .fd-in {
@@ -53,18 +54,23 @@ section {
   background-image: linear-gradient(-45deg, #96FFEE 0%, #6F6BFF 100%);
   color: #fff;
 
+.flex-container {
+    @media screen and (min-width: 768px) {
+       display: flex;
+       align-items: center;
+    }
+  }
+
   h1 {
     font-size: 80px;
     line-height: 1;
     font-weight: 900;
-    margin-bottom: 20px;
   }
 
-  p {
-    font-size: 20px;
+  h2,p {
+    font-size: 16px;
     line-height: 1;
     font-weight: 500;
-
     @media (max-width: 768px) {
       line-height: 1.5;
     }
@@ -85,9 +91,10 @@ section {
 
     @media (max-width: 768px) {
       display: block;
+      margin: 2px 0 0;
     }
 
-    &::after {
+    &:after {
       position: absolute;
       content: "";
       right: 20px;
@@ -441,35 +448,43 @@ height: auto !important;
 
 .osirase {
   @extend %section-padding;
-  img{width: 100%;}
-  
-  h3{
-     margin-left: 20px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
   }
-.cando {
-      _margin: 40px 0 0;
 
-      ol {
-        _padding: 10px;
-        list-style-type: none;
-      }
-
-      li {
-        background: $bg-gray;
-        font-size: 18px;
-      }
-    }
-
-&__text {
+  &__image {
     width: 50%;
 
     @media (max-width: 768px) {
       width: 100%;
     }
 
-    p {
-      line-height: 2;
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #1e366a;
     }
   }
+  
+  &__text {
+    padding-left: 30px;
+      ol {
+        list-style-type: none;
 
-}
+        border-top: solid #1e366a 1px;/*上のボーダー*/
+        border-bottom: solid #1e366a 1px;/*下のボーダー*/
+        margin: 1em 0;
+      }
+
+      li {
+        background: #cccccc;
+        font-size: 16px;
+        line-height: 2;
+        padding: 1em 0;
+        margin: 2px;
+      }
+
+    }
+  }
